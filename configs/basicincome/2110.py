@@ -10,6 +10,29 @@ def config() :
   payload["income"]               = {}
   payload["income"]["adult"]      = 0.015
   payload["income"]["minor"]      = 0.005
+  # If set to true, income of minors is given to them 
+  # on their 18th birthday in the form of a trust fund
   payload["income"]["minortrust"] = True
+  
+  # Assumptions about automation
+  payload["automation"]           = {}
+  # If true, humans will be replaced by robots 
+  # in certain jobs as a function of time
+  payload["automation"]["use"]    = True
+  # Job types to apply automation to, and 
+  # probability that a job of a given type is replaced
+  # in any given year
+  payload["automation"]["jobs"]   = {"manual"       : 0.050,
+                                     "semi-skilled" : 0.025,
+                                     "skilled"      : 0.010}
 
+  # Assumptions about taxation
+  # Assume that the govt can choose to tax
+  # income more, profits more, or vat more
+  # All taxes are "extra" relative to the baseline
+  payload["tax"]                  = {}
+  payload["tax"]["income"]        = 0.0
+  payload["tax"]["profit"]        = 0.1
+  payload["tax"]["vat"]           = 0.0
+  
   return payload 

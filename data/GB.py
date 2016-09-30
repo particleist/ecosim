@@ -50,5 +50,13 @@ def data() :
   payload["housing"]["couples"]                   = 7.8
   payload["housing"]["parents"]                   = 4.5
 
-
+  # Job type numbers, in fraction of workers
+  payload["jobs"]                                 = {}
+  payload["jobs"]["public_sector"]                = 0.18
+  payload["jobs"]["immigrant"]                    = 0.10
+  payload["jobs"]["unemployed"]                   = 0.06
+  payload["jobs"]["inactive"]                     = 0.22
+  
+  # Immigration numbers
+  
   return payload

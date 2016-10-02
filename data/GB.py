@@ -60,6 +60,8 @@ def data() :
   payload["jobs"]                                 = {}
   payload["jobs"]["public_sector"]                = 6
   payload["jobs"]["immigrant"]                    = 3
+  # The following categories are in essentially ordered
+  # in descending salary brackets
   payload["jobs"]["managers"]                     = 3.2
   payload["jobs"]["professional"]                 = 6.2
   payload["jobs"]["technical"]                    = 4.4
@@ -70,6 +72,11 @@ def data() :
   payload["jobs"]["machine_operators"]            = 2
   payload["jobs"]["unskilled"]                    = 3.4
   
-  # Immigration numbers
+  # Immigration 
+  # For now, as immigrants begin as only 10% of workforce, will
+  # simply assume they are distributed in the same proportion among
+  # the job categories as the full population
+  # Similarly will assume the public sector jobs are divided among
+  # categories in the same proportion as the entire market
   
   return payload

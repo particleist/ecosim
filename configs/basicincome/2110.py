@@ -29,10 +29,18 @@ def config() :
   # Job types to apply automation to, and 
   # probability that a job of a given type is replaced
   # in any given year
-  payload["automation"]["jobs"]   = {"manual"       : 0.050,
-                                     "semi-skilled" : 0.025,
-                                     "skilled"      : 0.010}
-
+  payload["automation"]["jobs"]   = {"unskilled"          : 0.050,
+                                     "machine_operators"  : 0.100,
+                                     "admin"              : 0.050,
+                                     "technical"          : 0.025,
+                                     "skilled_trade"      : 0.010}
+  # We need a critical mass beyond which automation will 
+  # immediately replace all remaining jobs being done by humans in a sector
+  payload["automation"]["cutoff"] = 0.75
+  # We need to estimate what fraction of jobs lost to automation
+  # will be recrated as technical jobs supporting automation
+  payload["automation"]["feedback"] = 0.05
+  
   # Assumptions about taxation
   # Assume that the govt can choose to tax
   # income more, profits more, or vat more

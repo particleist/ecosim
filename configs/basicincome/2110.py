@@ -10,6 +10,13 @@ def config() :
   payload["income"]               = {}
   payload["income"]["adult"]      = 0.015
   payload["income"]["minor"]      = 0.005
+  # Assume that basic income will be introduced gradually over time
+  # The following parameters control over how many years it is introduced
+  # Clearly introducing it instantly is simply an (unrealistic) special case
+  #
+  # The variable gives the number of years to phase in the full income
+  # the phasing is done in a uniform manner
+  payload["income"]["phasing"]    = 5
   # If set to true, income of minors is given to them 
   # on their 18th birthday in the form of a trust fund
   payload["income"]["minortrust"] = True
